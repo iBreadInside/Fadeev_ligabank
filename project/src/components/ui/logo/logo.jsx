@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { AppRoute } from '../../../../const';
+import { AppRoute } from '../../../const';
 import styles from './logo.module.scss';
 
 function BankLogo() {

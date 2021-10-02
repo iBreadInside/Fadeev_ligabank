@@ -8,7 +8,12 @@ $desktop-width: 1366px;
 $wrapper-width: 1170px;
 
 $han-purple: #2C36F2;
+$dark-blue: #2027b3;
 $black--text: #1F1E25;
+$lightgrey--default: #E0E1EA;
 $grey--background: #F6F7FF;
 $grey--line: #C1C2CA;
 $grey--text: #707C87;
+
+$banner-gradient: linear-gradient(0deg, $dark-blue 0%, $han-purple 67%);
+$banner-gradient--block: linear-gradient(183deg, rgba(56,65,255,0) 66%, rgba(56,65,255,1) 97%);

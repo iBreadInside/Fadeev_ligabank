@@ -13,7 +13,7 @@ function NavItem({linkPath, itemName, isFooter}) {
   return (
     <li className={styles.navItem}>
       <NavLink
-        className={styles.navLink}
+        className={`${styles.navLink} ${isFooter ? styles.navLink__footer : ''}`}
         activeClassName={`${styles.active} ${isFooter ? 'visuallyHidden' : ''}`}
         to={linkPath}>
           {itemName}

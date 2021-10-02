@@ -16,4 +16,8 @@
   display: block;
   padding: 12.5px;
   min-width: 203px;
+
+  &:hover {
+    opacity: .5;
+  }
 }

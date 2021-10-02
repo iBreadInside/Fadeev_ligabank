@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { AppRoute } from '../../../const';
 import styles from './header.module.scss'
-import BankLogo from './logo/logo';
-import NavList from './navList/navList';
+import BankLogo from '../logo/logo';
+import NavList from '../navList/navList';
 
 function Header() {
   return(

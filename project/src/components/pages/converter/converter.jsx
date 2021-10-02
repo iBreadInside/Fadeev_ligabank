@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from '../../ui/header/header';
-import SectionBanner from '../../ui/sectionBanner/sectionBanner';
+import Banner from '../../ui/banner/banner';
+import ConverterBlock from '../../ui/converterBlock/converterBlock';
+import Footer from '../../ui/footer/footer';
 
 function ConverterPage() {
   return(
@@ -8,19 +10,8 @@ function ConverterPage() {
       <Header />
 
       <main>
-        <SectionBanner />
-
-        <section className='converter-block'>
-          <h2 className='converter__title'>Конвертер валют</h2>
-          <div className='converter__fieled--have'>
-            <textarea></textarea>
-            <select></select>
-          </div>
-          <div className='converter__field--want'>
-            <textarea></textarea>
-            <select></select>
-          </div>
-        </section>
+        <Banner />
+        <ConverterBlock />
 
         <section className='converter__history'>
           <h2 className='converter__title converter__title--history'>История конвертации</h2>
@@ -29,9 +20,7 @@ function ConverterPage() {
         </section>
       </main>
 
-      <footer>
-        <section className='footer-block'></section>
-      </footer>
+      <Footer />
     </div>
   );
 }

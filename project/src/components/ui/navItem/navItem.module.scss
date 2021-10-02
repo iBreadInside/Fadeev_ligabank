@@ -1,4 +1,4 @@
-@import '../../../../../sass/variables.scss';
+@import '../../../sass/variables.scss';
 
 .navItem {
   list-style-type: none;
@@ -8,6 +8,14 @@
 .navLink {
   display: block;
   padding: 12.5px;
+}
+
+.navLink__footer {
+  padding: 5px;
+  font-weight: bold;
+  color: $black--text;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .active {

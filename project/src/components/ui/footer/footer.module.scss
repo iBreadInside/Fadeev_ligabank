@@ -1,0 +1,62 @@
+@import '../../../sass/variables.scss';
+
+.pageFooter {
+  background-color: $grey--background;
+}
+
+.container {
+  display: flex;
+  padding: 60px 0;
+}
+
+.logo {
+  max-width: 252px;
+}
+
+.text {
+  color: $grey--text;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.contacts {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.call {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 175px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 10px;
+    height: 16px;
+    background-image: url('../../../img/svg/smartphone-icon.svg');
+  }
+}
+
+.phone {
+  max-width: 155px;
+
+  &::before {
+    left: -25px;
+    width: 16px;
+    background-image: url('../../../img/svg/phone-icon.svg');
+  }
+}
+
+.tel {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+
+  &:hover {
+    opacity: .5;
+  }
+}

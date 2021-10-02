@@ -1,7 +1,7 @@
 import React from 'react';
-import { NavLinks } from '../../../../const';
+import { NavLinks } from '../../../const';
 import PropTypes from 'prop-types';
-import NavItem from './navItem/navItem';
+import NavItem from '../navItem/navItem';
 import styles from './navList.module.scss';
 
 NavList.propTypes = {
@@ -10,7 +10,7 @@ NavList.propTypes = {
 
 function NavList({isFooter = false}) {
   return(
-    <ul className={styles.list}>
+    <ul className={`${styles.list} ${isFooter ? styles.column : ''}`}>
       {NavLinks.map(
         ({text, route}) => (
           <NavItem
