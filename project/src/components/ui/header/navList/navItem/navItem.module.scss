@@ -1,0 +1,19 @@
+@import '../../../../../sass/variables.scss';
+
+.navItem {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navLink {
+  display: block;
+  padding: 12.5px;
+}
+
+.active {
+  color: $han-purple;
+}
+
+.navItem:hover .navLink {
+  opacity: .5;
+}
