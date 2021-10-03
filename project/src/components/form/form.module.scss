@@ -1,0 +1,26 @@
+@import 'src/sass/mixins.scss';
+@import 'src/sass/variables.scss';
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 120px;
+  grid-row-gap: 85px;
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    width: 55px;
+    height: 17px;
+    top: 62px;
+    left: 562px;
+    background-image: url('../../img/svg/arrow-left.svg');
+  }
+
+  &::after {
+    top: 81px;
+    transform: rotate(180deg);
+  }
+}

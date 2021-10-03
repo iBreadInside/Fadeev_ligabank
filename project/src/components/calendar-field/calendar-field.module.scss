@@ -1,0 +1,27 @@
+@import 'src/sass/variables.scss';
+
+.fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.calendar {
+  width: 390px;
+  height: 60px;
+  padding: 9px 53px 5px 5px;
+  border: 1px solid $black--text;
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+  color: $black--text;
+  background-image: url('../../img/svg/calendar-icon.svg');
+  background-repeat: no-repeat;
+  background-position: 330px 5px;
+
+  &:hover {
+    box-shadow: 0 0 10px 5px $black--text;
+  }
+}

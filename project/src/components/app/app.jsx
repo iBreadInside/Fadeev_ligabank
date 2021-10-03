@@ -1,20 +1,21 @@
 import React from 'react';
-import {Switch, Route, Router as BrowserRouter} from 'react-router-dom';
-import browserHistory from '../../browser-history';
-import ConverterPage from '../pages/converter/converter';
-import './app.scss';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import MainPage from '../main-page/main-page';
+import NotFoundPage from '../not-found-page/not-found-page';
+import {AppRoute} from '../../const';
 
-function App() {
+export default function App() {
   return (
-    <BrowserRouter history={browserHistory}>
+    <BrowserRouter>
       <Switch>
-        <Route exact path={'/'}>
-          <ConverterPage />
+        <Route exact path={AppRoute.MAIN}>
+          <MainPage/>
+        </Route>
+        <Route>
+          <NotFoundPage/>
         </Route>
       </Switch>
     </BrowserRouter>
-
   );
-}
+};
 
-export default App;
