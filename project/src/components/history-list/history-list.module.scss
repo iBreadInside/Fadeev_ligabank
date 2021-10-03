@@ -1,0 +1,14 @@
+@import 'src/sass/mixins.scss';
+@import 'src/sass/variables.scss';
+
+.container {
+  @include list-style-none;
+  margin-bottom: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 230px;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, 46px);
+  min-height: 230px;
+  justify-content: space-between;
+}

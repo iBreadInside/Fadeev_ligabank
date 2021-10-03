@@ -8,29 +8,6 @@ export const AppRoute = {
   LOGIN: '/login'
 };
 
-export const NavLinks = [
-  {
-    text: 'Услуги',
-    route: AppRoute.SERVICES,
-  },
-  {
-    text: 'Рассчитать кредит',
-    route: AppRoute.CREDIT_CALCULATOR,
-  },
-  {
-    text: 'Конвертер валют',
-    route: AppRoute.CONVERTER,
-  },
-  {
-    text: 'Контакты',
-    route: AppRoute.CONTACTS,
-  },
-  {
-    text: 'Задать вопрос',
-    route: AppRoute.QNA,
-  },
-];
-
 export const Social = {
   FACEBOOK: 'facebook',
   INSTAGRAM: 'instagram',
@@ -45,3 +22,25 @@ export const Currency = {
   GBP: 'GBP',
   CNY: 'CNY',
 };
+
+export const InputType = {
+  SELL: {
+    label: 'У меня есть',
+    type: 'sell',
+  },
+  BUY: {
+    label: 'Хочу приобрести',
+    type: 'buy',
+  },
+};
+
+export const DateType = {
+  SERVER: 'server',
+  HISTORY: 'history',
+};
+
+export const MAX_DATE_RANGE = 7;
+
+export const BACKEND_URL = 'https://www.cbr-xml-daily.ru';
+
+export const URL_ROUT = 'daily_json.js';

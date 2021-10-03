@@ -1,0 +1,37 @@
+@import 'src/sass/mixins.scss';
+@import 'src/sass/variables.scss';
+
+.item {
+  display: flex;
+  font-size: 18px;
+  line-height: 23px;
+  color: $black--text;
+
+  &:nth-child(n + 6) {
+    justify-content: flex-end;
+  }
+}
+
+.date {
+  margin-right: 40px;
+}
+
+.from {
+  position: relative;
+  padding-right: 66px;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 16px;
+    top: 4px;
+    right: 11px;
+    background-image: url('../../img/svg/arrow-thin.svg');
+    background-repeat: no-repeat;
+  }
+}
+
+.to {
+  width: 115px;
+}

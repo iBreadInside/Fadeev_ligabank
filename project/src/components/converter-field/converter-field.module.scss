@@ -1,0 +1,57 @@
+@import 'src/sass/mixins.scss';
+@import 'src/sass/variables.scss';
+
+.fieldset {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+  line-height: 31px;
+  color: $black--text;
+}
+
+.input {
+  width: 390px;
+  height: 60px;
+  text-align: center;
+  border: 1px solid $black--text;
+  border-radius: 4px;
+  color: $black--text;
+  background-color: transparent;
+  font-size: 24px;
+  line-height: 33px;
+  margin-top: 22px;
+
+  &:hover {
+    box-shadow: 0 0 10px 5px $black--text;
+  }
+}
+
+.select {
+  width: 120px;
+  height: 60px;
+  text-align: center;
+  border: 1px solid $black--text;
+  border-radius: 4px;
+  color: $black--text;
+  background-color: transparent;
+  font-size: 30px;
+  line-height: 46px;
+  appearance: none;
+  padding: 7px 40px 9px 18px;
+  background-image: url('../../img/svg/select.svg');
+  background-repeat: no-repeat;
+  background-position: 85px 24px;
+
+  &:hover {
+    box-shadow: 0 0 10px 5px $black--text;
+  }
+}
