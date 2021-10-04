@@ -21,12 +21,18 @@ export default function Banner() {
           </section>
           <section className={styles.imageBlock}>
             <picture className={styles.cards}>
-              <source type='image/webp' srcSet={`${cardsWebp} 1x, ${cardsWebp2x} 2x`} />
-              <img src={cardsPng} srcSet={`${cardsPng2x} 2x`} alt='Кредитные карты Лига-банка' />
+              <source
+               type='image/webp'
+               srcSet={`${cardsWebp} 1x, ${cardsWebp2x} 2x`}
+              />
+              <img
+                src={cardsPng}
+                srcSet={`${cardsPng2x} 2x`} alt='Кредитные карты Лига-банка'
+              />
             </picture>
           </section>
         </div>
       </div>
     </section>
   );
-};
+}

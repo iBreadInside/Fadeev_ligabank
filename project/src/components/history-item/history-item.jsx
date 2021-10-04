@@ -5,23 +5,18 @@ import {adaptDate} from '../../utils/date';
 import {DateType} from '../../const';
 
 export default function HistoryItem({data}) {
-  const {date, sellValue, currencySellValue, buyValue, currencyBuyValue} = data;
+  const {date, sellValue, sellCurrency, buyValue, buyCurrency} = data;
+
   return (
     <li className={styles.item}>
-      <span
-        className={styles.date}
-      >
+      <span className={styles.date}>
         {adaptDate(date, DateType.HISTORY)}
       </span>
-      <span
-        className={styles.from}
-      >
-        {sellValue.toString().replace('.', ',')} {currencySellValue}
+      <span className={styles.from}>
+        {sellValue.toString().replace('.', ',')} {sellCurrency}
       </span>
-      <span
-        className={styles.to}
-      >
-        {buyValue.toString().replace('.', ',')} {currencyBuyValue}
+      <span className={styles.to}>
+        {buyValue.toString().replace('.', ',')} {buyCurrency}
       </span>
     </li>
   );

@@ -6,11 +6,23 @@ import ExchangerField from '../converter-field/converter-field';
 import CalendarField from '../calendar-field/calendar-field';
 import Button from '../button/button';
 import LoadingScreen from '../loading-screen/loading-screen';
-import {InputType, Currency} from '../../const';
+import {Currency} from '../../const';
 import {getCalculationResult} from '../../utils/common';
 import {getRates, getHistory, getDate, getIsRatesDataLoaded} from '../../store/selectors';
 
 const MAX_HISTORY_COUNT = 10;
+
+const InputType = {
+  SELL: {
+    label: 'У меня есть',
+    type: 'sell',
+  },
+  BUY: {
+    label: 'Хочу приобрести',
+    type: 'buy',
+  },
+};
+
 let ID = 1;
 
 export default function Form() {
@@ -43,7 +55,7 @@ export default function Form() {
     const historyList = history.slice();
 
     if (history.length >= MAX_HISTORY_COUNT) {
-      historyList.pop();
+      historyList.shift();
     }
 
     dispatch(updateHistory([...historyList,

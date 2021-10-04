@@ -1,9 +1,11 @@
 import dayjs from 'dayjs';
-import {MAX_DATE_RANGE, DateType} from '../const';
+import {DateType} from '../const';
 
-const getMinDate = (date) => dayjs(date).subtract(MAX_DATE_RANGE, 'day').toDate();
+const MAX_DATE_RANGE = 7;
 
-const adaptDate = (date, dateType = DateType.SERVER) => {
+export const getMinDate = (date) => dayjs(date).subtract(MAX_DATE_RANGE, 'day').toDate();
+
+export const adaptDate = (date, dateType = DateType.SERVER) => {
   switch (dateType) {
     case DateType.SERVER:
       return dayjs(date).format('YYYY/MM/DD');
@@ -13,5 +15,3 @@ const adaptDate = (date, dateType = DateType.SERVER) => {
       return date;
   }
 };
-
-export {getMinDate, adaptDate};

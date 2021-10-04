@@ -8,7 +8,7 @@
   color: $black--text;
 
   &:nth-child(n + 6) {
-    justify-content: flex-end;
+    margin-left: 10px;
   }
 }
 
@@ -18,7 +18,7 @@
 
 .from {
   position: relative;
-  padding-right: 66px;
+  padding-right: 64px;
 
   &::after {
     position: absolute;
@@ -30,8 +30,4 @@
     background-image: url('../../img/svg/arrow-thin.svg');
     background-repeat: no-repeat;
   }
-}
-
-.to {
-  width: 115px;
 }

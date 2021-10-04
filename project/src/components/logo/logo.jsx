@@ -20,4 +20,4 @@ export default function Logo() {
       ЛИГА Банк
     </Link>
   );
-};
+}
