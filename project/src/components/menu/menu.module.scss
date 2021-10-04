@@ -18,6 +18,8 @@
 }
 
 .list__item_footer {
+  font-weight: bold;
+
   &:not(:last-child) {
     margin-right: 0;
     margin-bottom: 12px;

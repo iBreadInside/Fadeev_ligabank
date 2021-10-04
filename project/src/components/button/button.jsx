@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './button.module.scss';
 import PropTypes from 'prop-types';
 
-
 export default function Button({text, isBig=true, isDisabled, type, onClick}) {
   return (
     <button
@@ -14,7 +13,7 @@ export default function Button({text, isBig=true, isDisabled, type, onClick}) {
       {text}
     </button >
   );
-};
+}
 
 Button.propTypes = {
   text: PropTypes.string.isRequired,

@@ -1,15 +1,18 @@
 import {adaptDate} from './date';
-import {BACKEND_URL, URL_ROUT, Currency} from '../const';
+import {Currency} from '../const';
 
 const RUB_START_RATE = 1;
+const FIX = 4;
+const BACKEND_URL = 'https://www.cbr-xml-daily.ru';
+const URL_ROUT = 'daily_json.js';
 
-const adaptUrl = (date) => (
+export const adaptUrl = (date) => (
   date === adaptDate(new Date())
     ? `${BACKEND_URL}/${URL_ROUT}`
     : `${BACKEND_URL}/archive/${date}/${URL_ROUT}`
 );
 
-const adaptRates = ({Valute}) => ({
+export const adaptRates = ({Valute}) => ({
   [Currency.RUB]: RUB_START_RATE,
   [Currency.USD]: Valute.USD.Value,
   [Currency.EUR]: Valute.EUR.Value,
@@ -17,10 +20,7 @@ const adaptRates = ({Valute}) => ({
   [Currency.CNY]: Valute.CNY.Value,
 });
 
-const FIX = 4;
 
-const getCalculationResult = (value, sellValue, buyValue) => +(
+export const getCalculationResult = (value, sellValue, buyValue) => +(
   (value * sellValue / buyValue).toFixed(FIX)
 );
-
-export {adaptUrl, adaptRates, getCalculationResult};

@@ -46,7 +46,7 @@ export default function Menu({isFooter = false}) {
       }
     </ul>
   );
-};
+}
 
 Menu.propTypes = {
   isFooter: PropTypes.bool.isRequired,

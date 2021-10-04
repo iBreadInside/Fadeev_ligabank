@@ -1,7 +1,13 @@
 import React from 'react';
 import styles from './social-list.module.scss';
 import {Link} from 'react-router-dom';
-import {Social} from '../../const';
+
+const Social = {
+  FACEBOOK: 'facebook',
+  INSTAGRAM: 'instagram',
+  TWITTER: 'twitter',
+  YOUTUBE: 'youtube',
+};
 
 export default function SocialList() {
   return (
@@ -10,7 +16,7 @@ export default function SocialList() {
         Object.values(Social).map((name) => (
           <li key={name} className={styles.item}>
             <Link
-              to="#"
+              to='#'
               aria-label={name}
               className={`${styles.link} ${styles[name]}`}
             />

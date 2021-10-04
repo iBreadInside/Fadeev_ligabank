@@ -38,7 +38,7 @@ export default function ConverterField({label, type, value, onInputChange, onSel
       </label>
     </fieldset>
   );
-};
+}
 
 ConverterField.propTypes = {
   type: PropTypes.string.isRequired,
