@@ -133,6 +133,7 @@ export default function Form() {
       <ExchangerField
         type={InputType.SELL.type}
         label={InputType.SELL.label}
+        inputId={InputType.SELL.type}
         value={sellValue}
         onSelectChange={handleSelectChange}
         onInputChange={handleInputChange}
@@ -141,6 +142,7 @@ export default function Form() {
       <ExchangerField
         type={InputType.BUY.type}
         label={InputType.BUY.label}
+        inputId={InputType.BUY.type}
         value={buyValue}
         onSelectChange={handleSelectChange}
         onInputChange={handleInputChange}

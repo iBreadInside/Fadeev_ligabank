@@ -5,37 +5,36 @@ import {Currency} from '../../const';
 
 const MAX_INPUT_NUMBER_LENGTH = 10;
 
-export default function ConverterField({label, type, value, onInputChange, onSelectChange, currentCurrency}){
+export default function ConverterField({label, type, value, onInputChange, onSelectChange, currentCurrency, inputId}){
   return (
     <fieldset className={styles.fieldset}>
-      <label className={styles.label}>
+      <label className={styles.label} htmlFor={inputId}>
         {label}
-        <input
-          className={styles.input}
-          type='text'
-          inputMode={'numeric'}
-          maxLength={MAX_INPUT_NUMBER_LENGTH}
-          value={value}
-          onChange={(evt) => onInputChange(evt, type)}
-        />
       </label>
-      <label>
-        <select
-          className={styles.select}
-          name='Currency'
-          value={currentCurrency}
-          onChange={(evt) => onSelectChange(evt, type)}
-          aria-label='Выберити валюту'
-        >
-          {
-            Object.values(Currency).map((item) => (
-              <option key={item} value={item}>
-                {item}
-              </option>
-            ))
-          }
-        </select>
-      </label>
+      <input
+        className={styles.input}
+        type='text'
+        inputMode={'numeric'}
+        id={inputId}
+        maxLength={MAX_INPUT_NUMBER_LENGTH}
+        value={value}
+        onChange={(evt) => onInputChange(evt, type)}
+      />
+      <select
+        className={styles.select}
+        name='Currency'
+        value={currentCurrency}
+        onChange={(evt) => onSelectChange(evt, type)}
+        aria-label='Выберити валюту'
+      >
+        {
+          Object.values(Currency).map((item) => (
+            <option key={item} value={item}>
+              {item}
+            </option>
+          ))
+        }
+      </select>
     </fieldset>
   );
 }
@@ -50,4 +49,5 @@ ConverterField.propTypes = {
   onInputChange: PropTypes.func.isRequired,
   onSelectChange: PropTypes.func.isRequired,
   currentCurrency: PropTypes.string.isRequired,
+  inputId: PropTypes.string.isRequired,
 };

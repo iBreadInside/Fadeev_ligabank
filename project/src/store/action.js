@@ -1,8 +1,8 @@
 import {createAction} from '@reduxjs/toolkit';
 
 export const ActionType = {
-  LOAD_RATES: 'exchanger/loadRates',
-  SET_DATE: 'exchanger/setDate',
+  LOAD_RATES: 'converter/loadRates',
+  SET_DATE: 'converter/setDate',
   UPDATE_HISTORY: 'history/updateHistory',
   CLEAR_HISTORY: 'history/clearHistory',
 };

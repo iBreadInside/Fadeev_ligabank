@@ -1,17 +1,17 @@
 @font-face {
   font-family: 'Work Sans';
-  src: url('../fonts/work-sans-bold.woff2') format('woff2'),
-    url('../fonts/work-sans-bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
+  src: url('../fonts/work-sans-bold.woff2') format('woff2'),
+    url('../fonts/work-sans-bold.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/roboto-regular.woff2') format('woff2'),
-    url('../fonts/roboto-regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+  src: url('../fonts/roboto-regular.woff2') format('woff2'),
+    url('../fonts/roboto-regular.woff') format('woff');
 }
