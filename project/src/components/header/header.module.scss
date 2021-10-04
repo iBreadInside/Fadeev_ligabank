@@ -24,11 +24,11 @@
   min-width: 203px;
   align-items: center;
 
-  & svg {
-    margin-right: 14px;
-  }
-
   &:hover {
     opacity: .5;
   }
+}
+
+.loginImg {
+  margin-right: 14px;
 }

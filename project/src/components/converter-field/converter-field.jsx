@@ -5,17 +5,17 @@ import {Currency} from '../../const';
 
 const MAX_INPUT_NUMBER_LENGTH = 10;
 
-export default function ConverterField({label, type, value, onInputChange, onSelectChange, currentCurrency, inpitId}){
+export default function ConverterField({label, type, value, onInputChange, onSelectChange, currentCurrency, inputId}){
   return (
     <fieldset className={styles.fieldset}>
-      <label className={styles.label} for={inpitId}>
+      <label className={styles.label} htmlFor={inputId}>
         {label}
       </label>
       <input
         className={styles.input}
         type='text'
         inputMode={'numeric'}
-        id={inpitId}
+        id={inputId}
         maxLength={MAX_INPUT_NUMBER_LENGTH}
         value={value}
         onChange={(evt) => onInputChange(evt, type)}
@@ -49,5 +49,5 @@ ConverterField.propTypes = {
   onInputChange: PropTypes.func.isRequired,
   onSelectChange: PropTypes.func.isRequired,
   currentCurrency: PropTypes.string.isRequired,
-  inpitId: PropTypes.string.isRequired,
+  inputId: PropTypes.string.isRequired,
 };

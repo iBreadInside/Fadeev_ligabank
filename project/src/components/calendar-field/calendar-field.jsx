@@ -11,25 +11,25 @@ const currentDate = new Date();
 export default function CalendarField() {
   const dispatch = useDispatch();
 
-  const handleChange = (date) => {
+  const handleDateChange = (date) => {
     dispatch(fetchRates(date[0]));
   };
 
   return (
     <fieldset className={styles.fieldset}>
-      <label aria-label='Выбор даты'>
-        <Flatpickr
-          className={styles.calendar}
-          name='calendar'
-          options={{
-            dateFormat: 'j.m.Y',
-            defaultDate: currentDate,
-            maxDate: currentDate,
-            minDate: getMinDate(currentDate),
-            onChange: handleChange,
-          }}
-        />
-      </label>
+      <label className='visually-hidden' htmlFor='calendar'>Выбор даты</label>
+      <Flatpickr
+        id='calendar'
+        className={styles.calendar}
+        name='calendar'
+        options={{
+          dateFormat: 'j.m.Y',
+          defaultDate: currentDate,
+          maxDate: currentDate,
+          minDate: getMinDate(currentDate),
+          onChange: handleDateChange,
+        }}
+      />
     </fieldset>
   );
 }
