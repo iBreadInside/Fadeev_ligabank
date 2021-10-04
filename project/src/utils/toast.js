@@ -17,7 +17,7 @@ const AlertSettings = {
   SHOW_TIME: '3000',
 };
 
-const DEFAULT_MESSAGE = 'Что-то пошло не так, проверьте подключение к интернету!';
+const DEFAULT_MESSAGE = 'Ой! Что-то пошло не так!';
 
 export const showAlert = (message = DEFAULT_MESSAGE) => {
   const elementContainer = document.createElement('div');

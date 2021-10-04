@@ -8,6 +8,7 @@
   border: none;
   align-items: flex-end;
   justify-content: space-between;
+  position: relative;
 }
 
 .label {
@@ -16,6 +17,10 @@
   font-size: 22px;
   line-height: 31px;
   color: $black--text;
+  position: absolute;
+  top: -30px;
+  left: 0;
+  font-weight: bold;
 }
 
 .input {

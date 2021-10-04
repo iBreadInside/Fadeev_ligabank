@@ -14,13 +14,13 @@
     content: '';
     width: 55px;
     height: 17px;
-    top: 62px;
+    top: 31px;
     left: 562px;
     background-image: url('../../img/svg/arrow-left.svg');
   }
 
   &::after {
-    top: 81px;
+    top: 50px;
     transform: rotate(180deg);
   }
 }
