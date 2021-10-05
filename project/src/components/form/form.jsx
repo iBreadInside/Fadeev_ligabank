@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {updateHistory} from '../../store/action';
+import {updateHistory} from '../../store/actions';
 import styles from './form.module.scss';
 import ExchangerField from '../converter-field/converter-field';
 import CalendarField from '../calendar-field/calendar-field';
@@ -123,10 +123,6 @@ export default function Form() {
         break;
     }
   };
-
-  if (!isLoad) {
-    return <LoadingScreen/>;
-  }
 
   return (
     <form className={styles.form}>

@@ -1,5 +1,5 @@
 import {createReducer} from '@reduxjs/toolkit';
-import {loadRates, setDate, updateHistory, clearHistory} from './action';
+import {loadRates, setDate, updateHistory, clearHistory} from './actions';
 
 const initialState = {
   rates: {
@@ -14,19 +14,21 @@ const initialState = {
   isRatesDataLoaded: false,
 };
 
-export const reducer = createReducer(initialState, (builder) => {
-  builder
-    .addCase(loadRates, (state, action) => {
-      state.rates = action.payload;
-      state.isRatesDataLoaded = true;
-    })
-    .addCase(setDate, (state, action) => {
-      state.date = action.payload;
-    })
-    .addCase(updateHistory, (state, action) => {
-      state.history = action.payload;
-    })
-    .addCase(clearHistory, (state, action) => {
-      state.history = [];
-    });
+export const reducer = createReducer(
+  initialState,
+  (builder) => {
+    builder
+      .addCase(loadRates, (state, action) => {
+        state.rates = action.payload;
+        state.isRatesDataLoaded = true;
+      })
+      .addCase(setDate, (state, action) => {
+        state.date = action.payload;
+      })
+      .addCase(updateHistory, (state, action) => {
+        state.history = action.payload;
+      })
+      .addCase(clearHistory, (state) => {
+        state.history = [];
+      });
 });

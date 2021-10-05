@@ -3,8 +3,9 @@ import {Currency} from '../const';
 
 const RUB_START_RATE = 1;
 const FIX = 4;
-const BACKEND_URL = 'https://www.cbr-xml-daily.ru';
 const URL_ROUT = 'daily_json.js';
+
+export const BACKEND_URL = 'https://www.cbr-xml-daily.ru';
 
 export const adaptUrl = (date) => (
   date === adaptDate(new Date())

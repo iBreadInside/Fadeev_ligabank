@@ -9,28 +9,25 @@ export const ActionType = {
 
 export const loadRates = createAction(
   ActionType.LOAD_RATES,
-  (payload) => ({
-    payload,
+  (rates) => ({
+    payload: rates,
   })
 );
 
 export const setDate = createAction(
   ActionType.SET_DATE,
-  (payload) => ({
-    payload,
+  (date) => ({
+    payload: date,
   })
 );
 
 export const updateHistory = createAction(
   ActionType.UPDATE_HISTORY,
-  (payload) => ({
-    payload,
+  (currentHistory) => ({
+    payload: currentHistory,
   })
 );
 
 export const clearHistory = createAction(
   ActionType.CLEAR_HISTORY,
-  (payload) => ({
-    payload,
-  })
 );
