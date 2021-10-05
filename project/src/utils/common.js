@@ -5,12 +5,10 @@ const RUB_START_RATE = 1;
 const FIX = 4;
 const URL_ROUT = 'daily_json.js';
 
-export const BACKEND_URL = 'https://www.cbr-xml-daily.ru';
-
 export const adaptUrl = (date) => (
   date === adaptDate(new Date())
-    ? `${BACKEND_URL}/${URL_ROUT}`
-    : `${BACKEND_URL}/archive/${date}/${URL_ROUT}`
+    ? `/${URL_ROUT}`
+    : `/archive/${date}/${URL_ROUT}`
 );
 
 export const adaptRates = ({Valute}) => ({

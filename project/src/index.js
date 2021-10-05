@@ -6,7 +6,7 @@ import {configureStore} from '@reduxjs/toolkit';
 import ReactDOM from 'react-dom';
 import App from './components/app/app';
 import './sass/style.scss';
-import { createAPI } from './services/api';
+import {createAPI} from './services/api';
 
 const api = createAPI();
 
