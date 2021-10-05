@@ -28,6 +28,8 @@ export default function Banner() {
               <img
                 src={cardsPng}
                 srcSet={`${cardsPng2x} 2x`} alt='Кредитные карты Лига-банка'
+                width='444'
+                height='286'
               />
             </picture>
           </section>
