@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch} from 'react-redux';
-import {clearHistory} from '../../store/action';
+import {clearHistory} from '../../store/actions';
 import HistoryList from '../history-list/history-list';
 import Button from '../button/button';
 import styles from './history.module.scss';

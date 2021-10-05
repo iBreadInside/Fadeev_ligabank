@@ -1,21 +1,24 @@
-import axios from 'axios';
-import {loadRates, setDate} from './action';
+import {loadRates, setDate} from './actions';
 import {adaptDate} from '../utils/date';
 import {adaptUrl, adaptRates} from '../utils/common';
 import {showAlert} from '../utils/toast';
 
-export const fetchRates = (date) => (dispatch, _getState) => {
-  const adaptedDate = adaptDate(date);
-  const adaptedUrl = adaptUrl(adaptedDate);
+const RESPONSE_OK = 200;
+const MESSAGE = 'Что-то пошло не так. Возможно, курс ЦБ РФ на данную дату не установлен';
 
-  return axios
-    .get(adaptedUrl)
-    .then(({data}) => {
-      const adaptedRates = adaptRates(data);
-      dispatch(loadRates(adaptedRates));
-      dispatch(setDate(data.Date));
-    })
-    .catch(() => {
-      showAlert();
-    });
-};
+export const fetchRates = (date) => async (dispatch, _getState, api) => {
+  try {
+    const adaptedDate = adaptDate(date);
+    const adaptedUrl = adaptUrl(adaptedDate);
+
+    const response = await api.get(adaptedUrl);
+
+    if (response.status === RESPONSE_OK) {
+      const rates = adaptRates(response.data);
+      dispatch(loadRates(rates));
+      dispatch(setDate(response.data.Date));
+    }
+  } catch {
+    showAlert(MESSAGE);
+  }
+}
